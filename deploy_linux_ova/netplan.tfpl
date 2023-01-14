@@ -1,0 +1,19 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens192:
+      accept-ra: no
+      addresses:
+        - ${net4}${ip4}${net4mask}
+        - ${net6}${ip6}${net6mask}
+      routes:
+        - to: default
+          via: ${gw4}
+        - to: default
+          via: ${gw6}
+      nameservers:
+        addresses:
+        - ${dns}
+        search:
+        - ${search_domain}

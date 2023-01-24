@@ -2,6 +2,7 @@
 #
 #    
 
+
 # Vault parameters
 
 vault_url        = "https://vault.my.lan"
